@@ -1,0 +1,262 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joel Varghese - Contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+
+        /* Consistent Left-Aligned Header Layout */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4rem;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .left-nav-group {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #2563eb;
+            border-radius: 50%;
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #1e3a8a;
+        }
+
+        .cta-header-btn {
+            border: 2px solid #2563eb;
+            padding: 0.6rem 1.5rem;
+            color: #2563eb;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .cta-header-btn:hover {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        /* Layout Container Split */
+        .content-container {
+            max-width: 1100px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+        }
+
+        /* Left Side Context Column */
+        .contact-info h1 {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+        }
+
+        .info-block {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-block h3 {
+            color: #1e3a8a;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-block a, .info-block span {
+            color: #475569;
+            text-decoration: none;
+            font-size: 1.05rem;
+        }
+
+        .info-block a:hover {
+            color: #2563eb;
+        }
+
+        /* Right Side Modern Form Container */
+        .form-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #2563eb;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+            color: #1e293b;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #2563eb;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+            transition: background-color 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Mobile Breakpoints */
+        @media (max-width: 900px) {
+            header {
+                padding: 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .left-nav-group {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .content-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                margin: 2rem auto;
+            }
+            .form-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="left-nav-group">
+            <a href="JOEL.html" class="logo">
+                <div class="logo-dot"></div>
+                DevLog
+            </a>
+            <nav>
+                <a href="JOEL.html">Home</a>
+                <a href="Joel-Page2.html">Projects</a>
+                <a href="about.html">About Me</a>
+                <a href="#">Tech Stack</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+        </div>
+        <a href="#" class="cta-header-btn">Resume</a>
+    </header>
+
+    <main class="content-container">
+        <section class="contact-info">
+            <h1>Let's Connect</h1>
+            <p>Have an open project request, a tool collaboration inquiry, or simply want to speak about system infrastructure patterns? Drop your notice here!</p>
+            
+            <div class="info-block">
+                <h3>Email</h3>
+                <a href="mailto:joelvarghese916@gmail.com">joelvarghese916@gmail.com</a>
+            </div>
+
+            <div class="info-block">
+                <h3>Currently In</h3>
+                <span>Sultan Bathery, Kerala, India</span>
+            </div>
+        </section>
+
+        <section class="form-card">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

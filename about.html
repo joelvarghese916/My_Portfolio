@@ -1,0 +1,229 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joel Varghese - About Me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+
+        /* Consistent Left-Aligned Header Layout */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4rem;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .left-nav-group {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #2563eb;
+            border-radius: 50%;
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #1e3a8a;
+        }
+
+        .cta-header-btn {
+            border: 2px solid #2563eb;
+            padding: 0.6rem 1.5rem;
+            color: #2563eb;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .cta-header-btn:hover {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        /* Profile Layout Container */
+        .content-container {
+            max-width: 1100px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        /* Sidebar Profile Card Card */
+        .bio-sidebar {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 4px solid #2563eb;
+        }
+
+        .bio-avatar {
+            width: 130px;
+            height: 130px;
+            background-color: #cbd5e1;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .bio-sidebar h2 {
+            font-size: 1.4rem;
+            color: #1e3a8a;
+            margin-bottom: 0.25rem;
+        }
+
+        .bio-sidebar p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Detailed Narrative Text Layout */
+        .bio-story h1 {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-story p {
+            color: #475569;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-box {
+            background-color: #dbeafe;
+            border-left: 4px solid #2563eb;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 2rem 0;
+            color: #1e3a8a;
+            font-weight: 500;
+        }
+
+        /* Mobile Breakpoints */
+        @media (max-width: 900px) {
+            header {
+                padding: 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .left-nav-group {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .content-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                margin: 2rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="left-nav-group">
+            <a href="JOEL.html" class="logo">
+                <div class="logo-dot"></div>
+                DevLog
+            </a>
+            <nav>
+                <a href="JOEL.html">Home</a>
+                <a href="Joel-Page2.html">Projects</a>
+                <a href="about.html" class="active">About Me</a>
+                <a href="#">Tech Stack</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <a href="#" class="cta-header-btn">Resume</a>
+    </header>
+
+    <main class="content-container">
+        <aside class="bio-sidebar">
+            <div class="bio-avatar"></div>
+            <h2>Joel Varghese</h2>
+            <p>Software Engineer & Tech Lover</p>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </aside>
+
+        <section class="bio-story">
+            <h1>Hey, I'm Joel</h1>
+            <p>I am a passionate technology lover dedicated to turning lines of code into clean, scalable software. My journey into engineering started with pure curiosity about how computers handle large automated calculations, which rapidly bloomed into a career focusing on writing elegant code blocks and reliable web software configurations.</p>
+            
+            <div class="highlight-box">
+                "I believe code shouldn't just run—it should speak clearly to the next developer who opens it."
+            </div>
+
+            <p>When I am not deep inside an integrated IDE writing server logic or styling visual components, I spend my spare time reading architecture logs, setting up home networks, or tinkering with open-source project frameworks to learn how edge automation tools stack up against modern industry challenges.</p>
+        </section>
+    </main>
+
+</body>
+</html>

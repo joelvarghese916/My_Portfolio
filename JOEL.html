@@ -1,0 +1,335 @@
+<!-- JOEL.html (Page 1 - Left Navigation) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Portfolio - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1e293b;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        /* Grouping Logo and Nav together on the left */
+        .left-nav-group {
+            display: flex;
+            align-items: center;
+            gap: 4rem; /* Spacing between logo and navigation links */
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #2563eb;
+            border-radius: 50%;
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #1e3a8a;
+        }
+
+        /* Split Screen Container */
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        /* Left Section */
+        .left-side {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 4rem 4rem 4rem;
+            position: relative;
+            background-color: #f8fafc;
+        }
+
+        .profile-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Visual Graphic Elements */
+        .circle-bg {
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            background-color: #dbeafe;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .decorative-semi {
+            position: absolute;
+            left: 10px;
+            top: 25%;
+            width: 90px;
+            height: 45px;
+            background-color: #2563eb;
+            border-top-left-radius: 90px;
+            border-top-right-radius: 90px;
+            transform: rotate(-40deg);
+            z-index: 1;
+        }
+
+        .decorative-dot {
+            position: absolute;
+            right: 40px;
+            top: 20%;
+            width: 30px;
+            height: 30px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Avatar Image Canvas Placeholder */
+        .avatar-placeholder {
+            width: 320px;
+            height: 320px;
+            background-color: #94a3b8;
+            border-radius: 50%;
+            z-index: 2;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .avatar-silhouette {
+            width: 80%;
+            height: 90%;
+            background-color: #cbd5e1;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .profile-tag {
+            position: absolute;
+            bottom: 10%;
+            left: -20px;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            z-index: 3;
+            border-left: 4px solid #2563eb;
+        }
+
+        .profile-tag h3 {
+            font-size: 1.2rem;
+            color: #1e3a8a;
+            margin-bottom: 0.25rem;
+        }
+
+        .profile-tag p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* Right Section */
+        .right-side {
+            background-color: #2563eb;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 8rem 5rem 4rem 5rem;
+            position: relative;
+        }
+
+        .cta-header-btn {
+            position: absolute;
+            top: 2rem;
+            right: 4rem;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            padding: 0.6rem 1.5rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .cta-header-btn:hover {
+            background-color: white;
+            color: #2563eb;
+            border-color: white;
+        }
+
+        .main-headline {
+            font-size: 3.5rem;
+            line-height: 1.15;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            max-width: 450px;
+        }
+
+        .sub-headline {
+            font-size: 1.1rem;
+            color: #bfdbfe;
+            margin-bottom: 3rem;
+            max-width: 400px;
+            line-height: 1.6;
+        }
+
+        /* Clickable Action Button */
+        .action-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #2563eb;
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            width: fit-content;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .action-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+            header {
+                position: relative;
+                padding: 1.5rem;
+                background-color: #f8fafc;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .left-nav-group {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            nav {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+            .left-side {
+                padding: 4rem 2rem;
+            }
+            .right-side {
+                padding: 4rem 2rem;
+            }
+            .cta-header-btn {
+                position: static;
+                margin-top: 1rem;
+                display: inline-block;
+            }
+            .main-headline {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Combined container keeping Logo and Navigation on the left side -->
+        <div class="left-nav-group">
+            <a href="JOEL.html" class="logo">
+                <div class="logo-dot"></div>
+                DevLog
+            </a>
+            <nav>
+                <a href="JOEL.html" class="active">Home</a>
+                <a href="Joel-Page2.html">Projects</a>
+                <a href="about.html">About Me</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        
+        <!-- Keeps Resume separate on the right tracking panel -->
+        <a href="#" class="cta-header-btn">Resume</a>
+    </header>
+
+    <main class="hero-container">
+        <!-- Left Side Profile Visuals -->
+        <div class="left-side">
+            <div class="profile-wrapper">
+                <div class="circle-bg"></div>
+                <div class="decorative-semi"></div>
+                <div class="decorative-dot"></div>
+                <div class="avatar-placeholder">
+                    <div class="avatar-silhouette"></div>
+                </div>
+                <div class="profile-tag">
+                    <h3>Joel Varghese</h3>
+                    <p>Software Engineer & Tech Lover</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side Description Block -->
+        <div class="right-side">
+            <h1 class="main-headline">Building digital tools for the problems of this century</h1>
+            <p class="sub-headline">I build modern web software, configure open source workflows, and document digital innovations.</p>
+            
+            <!-- Click Target to Move to Next Page -->
+            <a href="Joel-Page2.html" class="action-button">View My Work &rarr;</a>
+        </div>
+    </main>
+
+</body>
+</html>

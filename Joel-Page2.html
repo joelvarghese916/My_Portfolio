@@ -1,0 +1,182 @@
+<!-- Joel-Page2.html (Page 2 - Showcase) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Portfolio - Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4rem;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #2563eb;
+            border-radius: 50%;
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: #1e3a8a;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .page-intro {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #2563eb;
+        }
+
+        .service-card .tech-tag {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #1e3a8a;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-4px);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="JOEL.html" class="logo">
+            <div class="logo-dot"></div>
+            DevLog
+        </a>
+        <nav>
+            <a href="JOEL.html">Home</a>
+            <a href="Joel-Page2.html" class="active">Projects</a>
+            <a href="#">About Me</a>
+            <a href="#">Tech Stack</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <h1 class="page-title">Personal Projects</h1>
+        <p class="page-intro">A curated collection of full stack software, automation utilities, and open source applications I have crafted.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="tech-tag">React &bull; Node.js</span>
+                <h3>Automated Infrastructure</h3>
+                <p>A personal dashboard application constructed to deploy, track, and monitor local container assets seamlessly via API frameworks.</p>
+            </div>
+            <div class="service-card">
+                <span class="tech-tag">Python</span>
+                <h3>Neural Pipeline Tool</h3>
+                <p>An open source script collection that cleans raw audio datasets and generates streamlined machine learning test metrics.</p>
+            </div>
+            <div class="service-card">
+                <span class="tech-tag">TypeScript</span>
+                <h3>Markdown Engine</h3>
+                <p>A fast desktop text editor built to parse extended markdown shorthand syntax directly into clean responsive web layouts.</p>
+            </div>
+        </div>
+
+        <a href="JOEL.html" class="back-btn">&larr; Return to Home</a>
+    </main>
+
+</body>
+</html>
