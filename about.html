@@ -111,7 +111,11 @@
             border-radius: 50%;
             margin: 0 auto 1.5rem auto;
         }
-
+        .bio-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
         .bio-sidebar h2 {
             font-size: 1.4rem;
             color: #1e3a8a;
@@ -202,7 +206,9 @@
 
     <main class="content-container">
         <aside class="bio-sidebar">
-            <div class="bio-avatar"></div>
+            <div class="bio-avatar">
+                <img class="bio-img" src="Joel.png" alt="Joel">
+            </div>
             <h2>Joel Varghese</h2>
             <p>Software Engineer & Tech Lover</p>
             <div class="social-links">
